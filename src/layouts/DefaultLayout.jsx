@@ -1,24 +1,27 @@
 import React from "react";
 import Footer from "../components/footer/Footer";
-import Header from "../components/header/Header";
+import Navbar from "../components/nav/Navbar";
 import Sidebar from "../components/sidebar/Sidebar";
 
 const DefaultLayout = ({ children }) => {
   return (
-    <div className="defaultLayout">
-      <div className="header">
-        <Header />
-      </div>
+    <body class="sb-nav-fixed">
+      <Navbar />
       <div className="main">
-        <div className="sidebar">
-          <Sidebar />
+        <div id="layoutSidenav">
+          <Sidebar>
+            <div className="children">{children}</div>
+          </Sidebar>
+          <div id="layoutSidenav_content">
+            <main>
+              <div class="container-fluid px-4">{children}</div>
+              <Footer />
+            </main>
+          </div>
         </div>
-        <div className="children">{children}</div>
       </div>
-      <div className="footer">
-        <Footer />
-      </div>
-    </div>
+      <div className="footer"></div>
+    </body>
   );
 };
 
