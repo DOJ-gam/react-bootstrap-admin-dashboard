@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "../../components/card/Card";
-import Navbar from "../../components/nav/Navbar";
 import TotalBalance from "../../components/totalBalance/TotalBalance";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import * as styles from "./styles.module.css";
